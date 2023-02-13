@@ -19,8 +19,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: zbnd
+          password: Poiu0789_
       - name: Build Docker Cache
         run: docker buildx build --platform linux/x86_64 --rm --push --target build --cache-from fox1t/turborepo-remote-cache:cache -t fox1t/turborepo-remote-cache:cache .
 
@@ -37,7 +37,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: zbnd
+          password: Poiu0789_
       - name: Build Docker Cache
         run: docker buildx build --platform linux/arm64 --rm --push --target build --cache-from fox1t/turborepo-remote-cache:cache -t fox1t/turborepo-remote-cache:cache .
